@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Política</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .card:hover {
+            transform: scale(1.05);
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Dashboard de Política</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dash.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pesquisa.html">Busca/Listagem</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h1 class="text-center">Busca/Listagem de Candidatos</h1>
+        <input type="text" id="searchInput" class="form-control mb-3" placeholder="Buscar por nome...">
+        <div class="row mb-3">
+            <div class="col-md-3">
+                <select id="regionFilter" class="form-control">
+                    <option value="">Todas as Regiões</option>
+                    <!-- Adicione opções de regiões aqui -->
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select id="cityFilter" class="form-control">
+                    <option value="">Todas as Cidades</option>
+                    <!-- Adicione opções de cidades aqui -->
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select id="stateFilter" class="form-control">
+                    <option value="">Todos os Estados</option>
+                    <!-- Adicione opções de estados aqui -->
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select id="partyFilter" class="form-control">
+                    <option value="">Todos os Partidos</option>
+                    <!-- Adicione opções de partidos aqui -->
+                </select>
+            </div>
+        </div>
+        <div id="searchResults" class="d-flex flex-wrap justify-content-center"></div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="candidateModal" tabindex="-1" aria-labelledby="candidateModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="candidateModalLabel">Detalhes do Candidato</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Nome:</strong> <span id="modalNome"></span></p>
+                    <p><strong>Partido:</strong> <span id="modalPartido"></span></p>
+                    <p><strong>Município:</strong> <span id="modalMunicipio"></span></p>
+                    <p><strong>Ocupação:</strong> <span id="modalOcupacao"></span></p>
+                    <p><strong>Estado:</strong> <span id="modalEstado"></span></p>
+                    <p><strong>Região:</strong> <span id="modalRegiao"></span></p>
+                    <p><strong>Despesa Máxima:</strong> <span id="modalDespesaMaxima"></span></p>
+                    <p><strong>Coligação:</strong> <span id="modalColigacao"></span></p>
+                    <p><strong>Gênero:</strong> <span id="modalGenero"></span></p>
+                    <p><strong>Faixa Etária:</strong> <span id="modalFaixaEtaria"></span></p>
+                    <p><strong>Estado Civil:</strong> <span id="modalEstadoCivil"></span></p>
+                    <p><strong>Cor:</strong> <span id="modalCor"></span></p>
+                    <p><strong>Grau de Instrução:</strong> <span id="modalGrauInstrucao"></span></p>
+                    <p><strong>Identidade de Gênero:</strong> <span id="modalIdentidadeGenero"></span></p>
+                    <p><strong>Quilombola:</strong> <span id="modalQuilombola"></span></p>
+                    <p><strong>Reeleição:</strong> <span id="modalReeleicao"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script2.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
