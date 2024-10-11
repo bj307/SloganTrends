@@ -107,26 +107,8 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding-inline: 20px;">
-
-        <a class="navbar-brand mb-0 h1">SloganTrends</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="dash.html">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="pesquisa.html">Busca/Listagem</a>
-                </li>
-            </ul>
-        </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="display: flex; justify-content: center;">
+        <a class="navbar-brand mb-0 h1" href="index.html">SloganTrends</a>
     </nav>
 
     <div id="chartContainer" style="position: relative; width: 100%; height: 500px; margin-top: -20px;">
@@ -159,29 +141,29 @@
 
     <div class="hero-section text-center">
         <div class="container">
-            <h1>Bem-vindo ao Dashboard de Política</h1>
-            <p style="font-weight: 300;">Explore dados e informações sobre candidatos e eleições.</p>
-            <a href="dash.html" class="btn btn-primary" style="border-radius: unset;">Acessar Dashboard</a>
+            <h1>Bem-vindo ao Portal de Dados Políticos</h1>
+            <p style="font-weight: 300;">Explore dados e informações sobre os candidatos e a eleição de 2024.</p>
+            <a href="dash.html" class="btn btn-primary" style="border-radius: unset;">Ver Portal</a>
         </div>
     </div>
     <div class="container mt-3">
         <h2 class="text-center mb-4">Funcionalidades</h2>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4" onclick="window.location.href='dash.html'">
                 <div class="feature text-center" style="border-radius: unset;">
                     <i class="fas fa-chart-line"></i>
-                    <h3>Dashboard Interativo</h3>
+                    <h3>Portal Interativo</h3>
                     <p>Visualize gráficos e estatísticas detalhadas sobre os candidatos.</p>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" onclick="window.location.href='pesquisa.html'">
                 <div class="feature text-center" style="border-radius: unset;">
                     <i class="fas fa-search"></i>
                     <h3>Busca Avançada</h3>
                     <p>Encontre candidatos por nome, partido, região e mais.</p>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" onclick="window.location.href='pesquisa.html'">
                 <div class="feature text-center" style="border-radius: unset;">
                     <i class="fas fa-info-circle"></i>
                     <h3>Informações Detalhadas</h3>

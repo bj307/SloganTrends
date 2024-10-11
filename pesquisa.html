@@ -17,25 +17,8 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Dashboard de Política</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="dash.html">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="pesquisa.html">Busca/Listagem</a>
-                </li>
-            </ul>
-        </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="display: flex; justify-content: center;">
+        <a class="navbar-brand mb-0 h1" href="index.html">SloganTrends</a>
     </nav>
     <div class="container mt-5">
         <h1 class="text-center">Busca/Listagem de Candidatos</h1>
@@ -47,18 +30,21 @@
                     <!-- Adicione opções de regiões aqui -->
                 </select>
             </div>
-            <div class="col-md-3">
-                <select id="cityFilter" class="form-control">
-                    <option value="">Todas as Cidades</option>
-                    <!-- Adicione opções de cidades aqui -->
-                </select>
-            </div>
+
             <div class="col-md-3">
                 <select id="stateFilter" class="form-control">
                     <option value="">Todos os Estados</option>
                     <!-- Adicione opções de estados aqui -->
                 </select>
             </div>
+
+            <div class="col-md-3">
+                <select id="cityFilter" class="form-control">
+                    <option value="">Todas as Cidades</option>
+                    <!-- Adicione opções de cidades aqui -->
+                </select>
+            </div>
+
             <div class="col-md-3">
                 <select id="partyFilter" class="form-control">
                     <option value="">Todos os Partidos</option>
