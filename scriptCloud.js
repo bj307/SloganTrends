@@ -386,6 +386,7 @@ function MontarDadosFrases(fs) {
     html += `<tr>`;
     html += `<td>${dd.Nome}</td>`;
     html += `<td>${dd.Coligacao}</td>`;
+    html += `<td>${dd.SiglaPartido}</td>`;
     html += `<td>${dd.Municipio}</td>`;
     html += `<td>${dd.UF}</td>`;
     html += `</tr>`;
