@@ -307,7 +307,7 @@ async function newCanva() {
     .angles([-90, 0, 90]);
 
   const url = window.location.href;
-  if (url.includes("dash.html") || url.includes("dash")) {
+  if (url.includes("slogans.html") || url.includes("slogans")) {
     chart.tooltip().enabled(true);
     chart.contextMenu().enabled(false);
     var colorRange = chart.colorRange();
